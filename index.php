@@ -9,72 +9,65 @@
 </head>
 <body>
     
-    <div class="pages mt-5">
-        <div class="container mt-5">
-            <div class="row">
-                <div class="col text-center g-4">
-                    <button class="btn btn-primary" id="home">Home</button>
-                    <button class="btn btn-info" id="about">About</button>
-                    <button class="btn btn-warning" id="contact">Contact</button>
+
+    <div class="container mt-4">
+        <div class="row mt-4">
+            <div class="col-6 offset-3">
+                <h2 class="text-center mb-4">Form Data</h2>
+                <hr>
+                <div class="card mt-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <form action="">
+                                <input type="text" placeholder="Name" class="form-control mb-2">
+                                <input type="text" placeholder="Age" class="form-control mb-2">
+                                <input type="text" placeholder="Skill" class="form-control mb-2">
+                                <input type="text" placeholder="Location" class="form-control mb-2">
+                                <button type="submit" class="btn btn-primary">Create</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <br>
-            <br>
-            <br>
-            <br>
-            <div class="row" id="page-content">
-                
+        </div>
+        <br><br>
+        <div class="row">
+            <div class="col">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Skill</th>
+                            <th>Location</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Gouranga Roy</td>
+                            <td>23</td>
+                            <td>Laravel Dev</td>
+                            <td>Thakurgaon</td>
+                            <td>
+                                <button class="btn btn-sm btn-info">Edit</button>
+                                <button class="btn btn-sm btn-danger">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
 
 
 
-
-
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // $(document).ready(function() {
-        //     $('.alert_btn').click(function() {
-        //         $.ajax({
-        //             url: "./ajax.php?name=Gouranga",
-        //             success: (data) => {
-        //                 alert(data);
-        //             }
-        //         });
-        //     });
-        // });
-
-        $(document).ready(function() {
-            $('#home').click(function() {
-                $.ajax({
-                    url: "./pages/home.php",
-                    success: (data) => {
-                        $('#page-content').html(data);
-                    },
-                    error: (err) => {
-                        console.log(err);
-                    }
-                });
-            });
-            $('#about').click(function() {
-                $.ajax({
-                    url: "./pages/about.php",
-                    success: (data) => {
-                        $('#page-content').html(data);
-                    }
-                });
-            });
-            $('#contact').click(function() {
-                $.ajax({
-                    url: "./pages/contact.php",
-                    success: (data) => {
-                        $('#page-content').html(data);
-                    }
-                });
-            });
-        });
+       
     </script>
 </body>
 </html>
